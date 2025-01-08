@@ -1,0 +1,422 @@
+/* Global Container */
+.travel-container {
+  background-color: #fdfdfd;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh; /* Ensures full screen height */
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Navbar */
+.navbar {
+
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the screen */
+  height: 60px; /* Fixed height for the navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000; /* Ensures navbar stays on top */
+
+}
+
+/* Logo */
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #1f1f1f;
+}
+.coloured-o {
+  position: relative;
+  display: inline-block;
+  color: #000;
+}
+
+.coloured-o::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 11px;
+  height: 11px;
+  background-color: #F1A501;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Menu */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  border: none !important;
+}
+
+/* Buttons */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-buttons .login-btn,
+.nav-buttons .sign-up-btn {
+  margin-right: 10px;
+  border: none;
+}
+
+/* Main Section */
+.travel-section {
+  margin-top: 60px; /* Adds space below the fixed navbar */
+  flex: 1; /* Makes it take up the remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Travel Content */
+.travel-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Text Section */
+.text-section .subtitle {
+  color: #DF6951;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text-section .main-title {
+  font-size: 3.5rem;
+  font-weight: bolder;
+  color: #181E4B;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+
+.text-section .description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.find-out-more {
+  background-color:  #F1A501;
+  border: none;
+  color: #fff;
+}
+
+.find-out-more:hover {
+  background-color: #e66a4d;
+}
+
+.play-demo {
+  border: 1px solid #ff7a59;
+  color: #ff7a59;
+}
+
+.play-demo:hover {
+  background-color: #ffefe8;
+  color: #e66a4d;
+}
+
+/* Image Section */
+.image-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 450px;
+  background-color: #ffefe8;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer or Additional Space */
+footer {
+  height: 50px;
+  background-color: #f5f5f5;
+}
+
+
+/* =====================second section =================== */
+
+/* Services Section */
+.services-section {
+  padding: 50px 20px;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+
+.services-header {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  color: #df6951;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  color: #181e4b;
+}
+
+.services-cards {
+  margin-top: 20px;
+}
+
+.card {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #181e4b;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* ============third section ================= */
+
+/* Destinations Section */
+.destinations-section {
+  padding: 30px 10px;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+
+.destinations-header {
+  margin-bottom: 40px;
+}
+
+.destinations-subtitle {
+  color: #df6951;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.destinations-title {
+  font-size: 2.5rem;
+  color: #181e4b;
+}
+
+.destinations-cards {
+  margin-top: 20px;
+}
+
+.destination-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+}
+
+.destination-image {
+  width: 100%;
+  height: auto;
+}
+
+.destination-content {
+  padding: 20px;
+}
+
+.destination-name {
+  font-size: 1.2rem;
+  color: #181e4b;
+  margin-bottom: 10px;
+}
+
+.destination-price {
+  font-size: 1rem;
+  color: #df6951;
+  font-weight: bold;
+}
+
+.destination-duration {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.destination-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: left;
+  max-width: 300px; /* Restrict card width */
+  margin: 0 auto; /* Center align cards */
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+}
+
+.destination-image {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensure the entire image fits nicely */
+}
+
+.destination-content {
+  padding: 15px;
+  text-align: center; /* Center text for better alignment */
+}
+
+.destination-name {
+  font-size: 1.2rem;
+  color: #181e4b;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.destination-price {
+  font-size: 1rem;
+  color: #df6951;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.destination-duration {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* =============fourth section ==================== */
+
+.steps-container {
+  padding: 40px 20px;
+  background: #fdfdfd;
+}
+
+.steps-text .steps-subtitle {
+  color: #df6951;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.steps-text .steps-title {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #181e4b;
+  margin-bottom: 30px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.step-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #181e4b;
+}
+
+.step-description {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.steps-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trip-card {
+  max-width: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.trip-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.status-card {
+  background: #f9f9f9;
+  border: none;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 10px 15px;
+}
