@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Typography, Button, Menu , Card, Progress } from "antd";
+import { Row, Col, Typography, Button, Menu , Card, Progress , Carousel, Avatar } from "antd";
 import { CalendarOutlined, UserOutlined, HeartOutlined , CaretDownOutlined} from "@ant-design/icons";
 import img1 from "./img1.png";
 import icon1 from "./icon1.png"
@@ -14,10 +14,37 @@ import book2 from "./book2.png"
 import book3 from "./book3.png"
 import card from "./card-img.jpg"
 import play from "./play-button.png"
+import logo1 from "./logo1.png.crdownload"
+import logo2 from "./logo2.png.crdownload"
+import logo3 from "./logo3.png.crdownload"
+import logo4 from "./logo4.png.crdownload"
 import "./App.css";
 const { Title, Text } = Typography;
 
 const App = () => {
+
+  const testimonials = [
+    {
+      name: "Mike Taylor",
+      location: "Lahore, Pakistan",
+      feedback:
+        "On the Windows talking painted posture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
+      position: "CEO of Red Button",
+      avatarUrl: "https://randomuser.me/api/portraits/men/32.jpg", // Example URL
+    },
+    {
+      name: "Chris Thomas",
+      location: "New York, USA",
+      feedback:
+        "The quick brown fox jumps over the lazy dog. Windows painted posture yet its express parties use.",
+      position: "CTO of Blue Widgets",
+      avatarUrl: "https://randomuser.me/api/portraits/men/45.jpg", // Example URL
+    },
+  ];
+  
+
+
+
   return (
     <div className="travel-container">
       {/* Navbar */}
@@ -264,9 +291,111 @@ const App = () => {
         </Col>
       </Row>
     </div>
+ 
+ {/* ==================second last section================= */}
+ <div style={{ padding: "40px 20px" }}>
+      <div style={{ display: "flex", marginBottom: "40px" }}>
+        {/* Left Side Text */}
+        <div style={{ flex: 1, textAlign: "left", paddingRight: "40px" }}>
+          <h2
+            style={{
+              fontWeight: "bold",
+              fontSize: "36px", // Heading size increased
+              lineHeight: "1.2",
+              marginBottom: "20px",
+            }}
+          >
+            What People Say <br /> About Us.
+          </h2>
+          <p style={{ color: "#777", fontSize: "16px", lineHeight: "1.6" }}>
+            Here's what our happy clients have to say about our services and
+            products. We value their feedback and strive to improve with every
+            experience.
+          </p>
+        </div>
 
+        {/* Right Side Carousel */}
+        <div style={{ flex: 2 }}>
+          <Carousel
+            autoplay
+            dotPosition="right"
+            vertical
+            dots={{ className: "custom-dots" }}
+          >
+            {testimonials.map((item, index) => (
+              <div key={index}>
+                <div
+                  style={{
+                    background: "#f9f9f9",
+                    borderRadius: "10px",
+                    padding: "20px",
+                    margin: "20px auto",
+                    maxWidth: "600px",
+                    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+                  }}
+                >
+                  <Avatar
+                    size={64}
+                    src={item.avatarUrl}
+                    icon={<UserOutlined />}
+                    style={{ marginBottom: "10px" }}
+                  />
+                  <p style={{ fontStyle: "italic", color: "#555" }}>
+                    "{item.feedback}"
+                  </p>
+                  <h4>{item.name}</h4>
+                  <p style={{ color: "#777" }}>{item.location}</p>
+                  <p style={{ fontWeight: "bold", color: "#333" }}>
+                    {item.position}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      </div>
 
+      {/* Logos Section */}
+      <div
+        style={{
+          marginTop: "40px",
+          display: "flex",
+          justifyContent: "center",
+          gap: "30px",
+          flexWrap: "wrap",
+        }}
+      >
+        <img
+          src={
+            logo1
+          }
+          alt="Axon"
+          style={{ height: "40px", filter: "grayscale(1)" }}
+        />
+        <img
+          src={logo2}
+          alt="Jetstar"
+          style={{ height: "40px", filter: "grayscale(1)" }}
+        />
+        <img
+          src={logo3}
+          alt="Expedia"
+          style={{ height: "40px", filter: "grayscale(1)" }}
+        />
+        <img
+          src={logo4}
+          alt="Qantas"
+          style={{ height: "40px", filter: "grayscale(1)" }}
+        />
+        <img
+          src={logo5}
+          alt="Alitalia"
+          style={{ height: "40px", filter: "grayscale(1)" }}
+        />
+      </div>
     </div>
+ 
+   </div>
   );
 };
 
